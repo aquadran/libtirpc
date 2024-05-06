@@ -83,7 +83,11 @@ static struct sgl_limits {
 };
 #else
 
+#if defined(__APPLE__)
+#include <machine/endian.h>
+#else
 #include <endian.h>
+#endif
 #define IEEEFP
 
 #endif /* vax */
