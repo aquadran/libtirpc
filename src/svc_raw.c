@@ -43,6 +43,7 @@
 #include <sys/types.h>
 #include <rpc/raw.h>
 #include <stdlib.h>
+#include <string.h>
 
 #ifndef UDPMSGSIZE
 #define	UDPMSGSIZE 8800
