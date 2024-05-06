@@ -24,6 +24,7 @@
  * SUCH DAMAGE.
  */
 
+#if !defined(__APPLE__)
 
 #include <sys/param.h>
 #include <sys/socket.h>
@@ -49,3 +50,5 @@ getpeereid(int s, uid_t *euid, gid_t *egid)
 	*egid = uc.gid;
 	return (0);
  }
+
+#endif
