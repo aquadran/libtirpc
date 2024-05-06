@@ -61,6 +61,13 @@
 #define	MAX(a, b)	(((a) > (b)) ? (a) : (b))
 #endif
 
+#if defined(__APPLE__)
+#define SOL_IP            IPPROTO_IP
+#define SOL_IPV6          IPPROTO_IPV6
+#define IPV6_PKTINFO      IP_PKTINFO
+#define IPV6_RECVPKTINFO  IP_RECVPKTINFO
+#endif
+
 static void svc_dg_ops(SVCXPRT *);
 static enum xprt_stat svc_dg_stat(SVCXPRT *);
 static bool_t svc_dg_recv(SVCXPRT *, struct rpc_msg *);

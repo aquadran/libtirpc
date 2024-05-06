@@ -56,6 +56,10 @@
 #include <rpc/nettype.h>
 #include "rpc_com.h"
 
+#if defined(__APPLE__)
+#define SOL_IPV6 IPPROTO_IPV6
+#endif
+
 struct handle {
 	NCONF_HANDLE *nhandle;
 	int nflag;		/* Whether NETPATH or NETCONFIG */
